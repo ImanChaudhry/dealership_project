@@ -36,6 +36,9 @@ public class DataLoader implements ApplicationRunner {
         Customer customer4 = new Customer("Eve");
         customerRepository.save(customer4);
 
+        Customer customer5 = new Customer("Jane");
+        customerRepository.save(customer5);
+
         Car car1 = new Car("Speedo", "sporty", "Gemma");
         carRepository.save(car1);
 
@@ -47,5 +50,8 @@ public class DataLoader implements ApplicationRunner {
 
         Car car4 = new Car("Superb", "family", "Eve");
         carRepository.save(car4);
+
+        Car car5 = new Car("Superb", "family", "Jane");
+        carRepository.save(car5);
     }
 }
