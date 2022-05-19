@@ -22,7 +22,7 @@ public class Car {
 
     @ManyToOne
     @JoinColumn(name = "vet_id", nullable = false)
-    private Customer customer;
+    private String customer;
 
 
 // next, create constructors
@@ -66,11 +66,11 @@ public class Car {
         this.type = type;
     }
 
-    public Customer getCustomer() {
+    public String getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(String customer) {
         this.customer = customer;
     }
 }

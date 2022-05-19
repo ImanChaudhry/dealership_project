@@ -26,6 +26,7 @@ public class CarController {
         if (type != null) {
             return new ResponseEntity(carRepository.findAll(), HttpStatus.OK);
         }
+        return null;
     }
 
 
@@ -33,7 +34,7 @@ public class CarController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Car>> getCar (@PathVariable Long id){
-        return new ResponseEntity(carRepository.findById(id)), HttpStatus.OK);
+        return new ResponseEntity(carRepository.findById(id),  HttpStatus.OK);
     }
 
 // POST
@@ -43,5 +44,9 @@ public class CarController {
         carRepository.save(newCar);
         return new ResponseEntity<>(newCar, HttpStatus.CREATED);
     }
+
+// DELETE
+
+
 
 }
