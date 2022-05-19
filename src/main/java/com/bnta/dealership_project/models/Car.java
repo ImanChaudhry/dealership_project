@@ -28,7 +28,7 @@ public class Car {
 // next, create constructors
 
 
-    public Car(String name, String type, Customer customer) {
+    public Car(String name, String type, String customer) {
         this.name = name;
         this.type = type;
         this.customer = customer;
