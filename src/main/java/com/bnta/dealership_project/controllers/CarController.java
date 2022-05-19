@@ -47,6 +47,19 @@ public class CarController {
 
 // DELETE
 
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Long> deleteCar(@PathVariable Long id){
+        var car = carRepository.findById(id);
+        if (car.isEmpty()) {
+            return new ResponseEntity<>(id, HttpStatus.NOT_FOUND);
+        } else {
+            carRepository.delete(car.get());
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        }
+    }
+
+
+
 
 
 }

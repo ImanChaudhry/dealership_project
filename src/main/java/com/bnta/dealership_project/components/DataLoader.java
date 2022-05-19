@@ -39,19 +39,19 @@ public class DataLoader implements ApplicationRunner {
         Customer customer5 = new Customer("Jane");
         customerRepository.save(customer5);
 
-        Car car1 = new Car("Speedo", "sporty", "Gemma");
+        Car car1 = new Car("Speedo", "sporty", "customer3");
         carRepository.save(car1);
 
-        Car car2 = new Car("Wagon", "family", "Brian");
+        Car car2 = new Car("Wagon", "family", "customer1");
         carRepository.save(car2);
 
-        Car car3 = new Car("Inferno", "sporty", "Joe");
+        Car car3 = new Car("Inferno", "sporty", "customer2");
         carRepository.save(car3);
 
-        Car car4 = new Car("Superb", "family", "Eve");
+        Car car4 = new Car("Superb", "family", "customer4");
         carRepository.save(car4);
 
-        Car car5 = new Car("Superb", "family", "Jane");
+        Car car5 = new Car("Superb", "family", "customer5");
         carRepository.save(car5);
     }
 }

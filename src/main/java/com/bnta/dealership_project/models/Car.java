@@ -21,14 +21,14 @@ public class Car {
     private String type;
 
     @ManyToOne
-    @JoinColumn(name = "vet_id", nullable = false)
-    private String customer;
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
 
 
 // next, create constructors
 
 
-    public Car(String name, String type, String customer) {
+    public Car(String name, String type, Customer customer) {
         this.name = name;
         this.type = type;
         this.customer = customer;
@@ -66,11 +66,11 @@ public class Car {
         this.type = type;
     }
 
-    public String getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(String customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 }
